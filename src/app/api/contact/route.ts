@@ -1,7 +1,11 @@
 import { Resend } from "resend";
 import { NextResponse } from "next/server";
 
-const resend = new Resend(process.env.RESEND_API_KEY);
+function getResend() {
+  const key = process.env.RESEND_API_KEY;
+  if (!key) return null;
+  return new Resend(key);
+}
 
 // Simple in-memory rate limiting: max 3 submissions per IP per hour
 const rateLimit = new Map<string, number[]>();
@@ -51,6 +55,14 @@ export async function POST(request: Request) {
     return NextResponse.json(
       { error: "Name and email are required." },
       { status: 400 }
+    );
+  }
+
+  const resend = getResend();
+  if (!resend) {
+    return NextResponse.json(
+      { error: "Email service is not configured." },
+      { status: 503 }
     );
   }
 
