@@ -72,8 +72,36 @@ export default function Home() {
         </div>
       </section>
 
+      {/* External weather tools */}
+      <section className="bg-cream pt-4 pb-2 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-5xl mx-auto flex flex-wrap items-center justify-center gap-4">
+          <a
+            href="https://zoom.earth/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 bg-white border border-gray-300 rounded-full px-5 py-2.5 text-sm font-medium text-gray-700 hover:border-forest hover:text-forest transition-colors shadow-md"
+          >
+            Zoom Earth
+            <svg className="w-3.5 h-3.5 opacity-50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+            </svg>
+          </a>
+          <a
+            href="https://reg.bom.gov.au/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 bg-white border border-gray-300 rounded-full px-5 py-2.5 text-sm font-medium text-gray-700 hover:border-forest hover:text-forest transition-colors shadow-md"
+          >
+            Bureau of Meteorology (BOM)
+            <svg className="w-3.5 h-3.5 opacity-50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+            </svg>
+          </a>
+        </div>
+      </section>
+
       {/* Climate Change Business Impact */}
-      <Section>
+      <Section className="pt-8 md:pt-12">
         <h2 className="text-3xl md:text-4xl font-bold text-forest mb-6">
           Climate Change &amp; Your Business
         </h2>
