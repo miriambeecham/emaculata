@@ -55,7 +55,7 @@ export default function AboutPage() {
                 benefit from the latest insights and data-driven strategies.
               </p>
               <p>
-                Brad holds a Master&apos;s degree in Environmental Science from the
+                Brad holds a Master of Environmental Science from the
                 Australian National University and has collaborated with organisations
                 across sectors such as energy, finance, and real estate to build
                 climate resilience into their operations. With a practical
